@@ -41,6 +41,11 @@ open class IdentificationViewController: MercadoPagoUIViewController, UITextFiel
         self.callback = callback
         self.identificationTypes = identificationTypes
         self.errorExitCallback = errorExitCallback
+        print("INIT - IDENTIFICATION")
+    }
+
+    deinit {
+        print("DEINIT - IDENTIFICATION")
     }
 
     override func loadMPStyles() {

@@ -25,6 +25,8 @@ extension MercadoPagoCheckout {
                 return
             }
 
+        
+
             strongSelf.viewModel.updateCheckoutModel(paymentOptionSelected : paymentOptionSelected)
             strongSelf.viewModel.rootVC = false
             strongSelf.executeNextStep()
@@ -151,9 +153,9 @@ extension MercadoPagoCheckout {
                 }
         })
 
-        checkoutVC.callbackCancel = {
-            self.viewModel.readyToPay = false
-            self.navigationController.popViewController(animated: true)
+        checkoutVC.callbackCancel = { [weak self] in
+            self?.viewModel.readyToPay = false
+            self?.navigationController.popViewController(animated: true)
         }
 
         self.pushViewController(viewController: checkoutVC, animated: true)

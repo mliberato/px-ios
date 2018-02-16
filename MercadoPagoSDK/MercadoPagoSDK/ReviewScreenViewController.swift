@@ -37,8 +37,8 @@ open class ReviewScreenViewController: MercadoPagoUIScrollViewController, UITabl
 
     @IBOutlet weak var checkoutTable: UITableView!
     
-    var floattingButton : PXContainedActionButtonView?
-    var cellButton : PXContainedActionButtonView?
+    //var floattingButton : PXContainedActionButtonView?
+    //var cellButton : PXContainedActionButtonView?
 
    public init(viewModel: CheckoutViewModel, callbackPaymentData : @escaping (PaymentData) -> Void, callbackExit :@escaping (() -> Void), callbackConfirm : @escaping (PaymentData) -> Void) {
         super.init(nibName: "ReviewScreenViewController", bundle: MercadoPago.getBundle())
@@ -47,6 +47,9 @@ open class ReviewScreenViewController: MercadoPagoUIScrollViewController, UITabl
         self.callbackPaymentData = callbackPaymentData
         self.callbackExit = callbackExit
         self.callbackConfirm = callbackConfirm
+
+        print("INIT - REVISA Y CONFIRMA")
+
     }
 
     private func initCommon() {
@@ -74,6 +77,10 @@ open class ReviewScreenViewController: MercadoPagoUIScrollViewController, UITabl
     required public init?(coder aDecoder: NSCoder) {
         MercadoPagoContext.clearPaymentKey()
         fatalError("init(coder:) has not been implemented")
+    }
+
+    deinit {
+        print("DEINIT - REVISA Y CONFIRMA")
     }
 
     override func showNavBar() {
@@ -300,16 +307,18 @@ open class ReviewScreenViewController: MercadoPagoUIScrollViewController, UITabl
     }
 
     private func getConfirmPaymentButtonCell(indexPath: IndexPath) -> UITableViewCell {
-        let confirmPaymentTableViewCell = self.checkoutTable.dequeueReusableCell(withIdentifier: "confirmPaymentTableViewCell", for: indexPath)
-        confirmPaymentTableViewCell.selectionStyle = .none
-        self.cellButton?.removeFromSuperview()
-        self.cellButton = buildContainedButton()
-        confirmPaymentTableViewCell.contentView.addSubview(self.cellButton!)
-        PXLayout.pinLeft(view: self.cellButton!).isActive = true
-        PXLayout.pinRight(view: self.cellButton!).isActive = true
-        PXLayout.centerVertically(view: self.cellButton!).isActive = true
-        PXLayout.centerHorizontally(view: self.cellButton!).isActive = true
-        return confirmPaymentTableViewCell
+//        let confirmPaymentTableViewCell = self.checkoutTable.dequeueReusableCell(withIdentifier: "confirmPaymentTableViewCell", for: indexPath)
+//        confirmPaymentTableViewCell.selectionStyle = .none
+//        self.cellButton?.removeFromSuperview()
+//        self.cellButton = buildContainedButton()
+//        confirmPaymentTableViewCell.contentView.addSubview(self.cellButton!)
+//        PXLayout.pinLeft(view: self.cellButton!).isActive = true
+//        PXLayout.pinRight(view: self.cellButton!).isActive = true
+//        PXLayout.centerVertically(view: self.cellButton!).isActive = true
+//        PXLayout.centerHorizontally(view: self.cellButton!).isActive = true
+//        return confirmPaymentTableViewCell
+
+        return UITableViewCell()
     }
     
     func buildContainedButton() -> PXContainedActionButtonView {
@@ -399,12 +408,14 @@ open class ReviewScreenViewController: MercadoPagoUIScrollViewController, UITabl
     }
 
     open func isConfirmButtonVisible() -> Bool {
-        guard let floatingButton = self.floattingButton, let fixedButton = self.cellButton else {
-            return false
-        }
-        let floatingButtonCoordinates = floatingButton.convert(CGPoint.zero, from: self.view.window)
-        let fixedButtonCoordinates = fixedButton.convert(CGPoint.zero, from: self.view.window)
-        return fixedButtonCoordinates.y >= floatingButtonCoordinates.y
+//        guard let floatingButton = self.floattingButton, let fixedButton = self.cellButton else {
+//            return false
+//        }
+//        let floatingButtonCoordinates = floatingButton.convert(CGPoint.zero, from: self.view.window)
+//        let fixedButtonCoordinates = fixedButton.convert(CGPoint.zero, from: self.view.window)
+//        return fixedButtonCoordinates.y >= floatingButtonCoordinates.y
+
+        return false
     }
 
     open func getFloatingButtonView() -> UIView {
@@ -421,33 +432,33 @@ open class ReviewScreenViewController: MercadoPagoUIScrollViewController, UITabl
     }
 
     open func displayFloatingConfirmButton() {
-        if self.floatingConfirmButtonView != nil {
-            return
-        }
-        self.floatingConfirmButtonView = self.getFloatingButtonView()
-        self.view.addSubview(floatingConfirmButtonView)
-        let height = self.viewModel.getFloatingConfirmButtonHeight() + (PXLayout.getSafeAreaBottomInset() / 2)
-        PXLayout.setHeight(owner: self.floatingConfirmButtonView, height: height).isActive = true
-        PXLayout.pinLeft(view: self.floatingConfirmButtonView).isActive = true
-        PXLayout.pinRight(view: self.floatingConfirmButtonView).isActive = true
-        PXLayout.pinBottom(view: self.floatingConfirmButtonView).isActive = true
-        PXLayout.centerHorizontally(view: self.floatingConfirmButtonView).isActive = true
-        self.floattingButton = buildContainedButton()
-        self.floatingConfirmButtonView.addSubview(self.floattingButton!)
-        PXLayout.pinLeft(view: self.floattingButton!).isActive = true
-        PXLayout.pinRight(view: self.floattingButton!).isActive = true
+//        if self.floatingConfirmButtonView != nil {
+//            return
+//        }
+//        self.floatingConfirmButtonView = self.getFloatingButtonView()
+//        self.view.addSubview(floatingConfirmButtonView)
+//        let height = self.viewModel.getFloatingConfirmButtonHeight() + (PXLayout.getSafeAreaBottomInset() / 2)
+//        PXLayout.setHeight(owner: self.floatingConfirmButtonView, height: height).isActive = true
+//        PXLayout.pinLeft(view: self.floatingConfirmButtonView).isActive = true
+//        PXLayout.pinRight(view: self.floatingConfirmButtonView).isActive = true
+//        PXLayout.pinBottom(view: self.floatingConfirmButtonView).isActive = true
+//        PXLayout.centerHorizontally(view: self.floatingConfirmButtonView).isActive = true
+        //self.floattingButton = buildContainedButton()
+        //self.floatingConfirmButtonView.addSubview(self.floattingButton!)
+//        PXLayout.pinLeft(view: self.floattingButton!).isActive = true
+//        PXLayout.pinRight(view: self.floattingButton!).isActive = true
         //PXLayout.centerVertically(view: self.floattingButton!).isActive = true
-        PXLayout.centerHorizontally(view: self.floattingButton!).isActive = true
-        PXLayout.pinTop(view: self.floattingButton!).isActive = true
-        self.view.bringSubview(toFront: floatingConfirmButtonView)
+        //PXLayout.centerHorizontally(view: self.floattingButton!).isActive = true
+//        PXLayout.pinTop(view: self.floattingButton!).isActive = true
+     //   self.view.bringSubview(toFront: floatingConfirmButtonView)
     }
 
     public func checkFloatingButtonVisibility() {
-        if isConfirmButtonVisible() {
-            self.floatingConfirmButtonView.isHidden = true
-        } else {
-            self.floatingConfirmButtonView.isHidden = false
-        }
+//        if isConfirmButtonVisible() {
+//            self.floatingConfirmButtonView.isHidden = true
+//        } else {
+//            self.floatingConfirmButtonView.isHidden = false
+//        }
     }
 
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {

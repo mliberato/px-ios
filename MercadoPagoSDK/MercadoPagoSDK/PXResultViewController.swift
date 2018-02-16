@@ -28,10 +28,16 @@ class PXResultViewController: PXComponentContainerViewController {
         super.init()
         self.scrollView.backgroundColor = viewModel.primaryResultColor()
         self.shouldHideNavigationBar = true
+
+        print("INIT - Congrats")
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    deinit {
+        print("DEINIT - Congrats")
     }
     
     override func trackInfo() {

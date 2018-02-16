@@ -83,6 +83,11 @@ open class AdditionalStepViewController: MercadoPagoUIScrollViewController, UITa
         self.viewModel = viewModel
         self.viewModel.callback = callback
         super.init(nibName: "AdditionalStepViewController", bundle: self.bundle)
+        print("INIT - AdditionalStep View Controller")
+    }
+
+    deinit {
+        print("DEINIT - AdditionalStep View Controller")
     }
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

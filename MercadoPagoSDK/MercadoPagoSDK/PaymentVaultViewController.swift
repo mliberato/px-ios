@@ -51,7 +51,7 @@ open class PaymentVaultViewController: MercadoPagoUIScrollViewController, UIColl
 
     var bundle = MercadoPago.getBundle()
 
-    var titleSectionReference: PaymentVaultTitleCollectionViewCell!
+//    var titleSectionReference: PaymentVaultTitleCollectionViewCell!
 
     fileprivate var tintColor = true
     fileprivate var loadingGroups = true
@@ -72,6 +72,12 @@ open class PaymentVaultViewController: MercadoPagoUIScrollViewController, UIColl
             self.groupName = groupName
         }
         self.callback = callback
+
+        print("INIT -- PAYMENTVAULT")
+    }
+
+    deinit {
+                print("DEINIT -- PAYMENTVAULT")
     }
 
     override func trackInfo() {
@@ -110,19 +116,19 @@ open class PaymentVaultViewController: MercadoPagoUIScrollViewController, UIColl
 
         self.registerAllCells()
 
-        if callbackCancel == nil {
-            self.callbackCancel = {() -> Void in
-                if self.navigationController?.viewControllers[0] == self {
-                    self.dismiss(animated: true, completion: {
-
-                    })
-                } else {
-                    self.navigationController!.popViewController(animated: true)
-                }
-            }
-        } else {
-            self.callbackCancel = callbackCancel
-        }
+//        if callbackCancel == nil {
+//            self.callbackCancel = {() -> Void in
+//                if self.navigationController?.viewControllers[0] == self {
+//                    self.dismiss(animated: true, completion: {
+//
+//                    })
+//                } else {
+//                    self.navigationController!.popViewController(animated: true)
+//                }
+//            }
+//        } else {
+//            self.callbackCancel = callbackCancel
+//        }
 
        self.collectionSearch.backgroundColor = UIColor.white
     }
@@ -140,7 +146,7 @@ open class PaymentVaultViewController: MercadoPagoUIScrollViewController, UIColl
         self.hideNavBar()
         
         if let _ = self.navigationItem.leftBarButtonItem {
-               self.navigationItem.leftBarButtonItem!.action = #selector(invokeCallbackCancelShowingNavBar)
+               self.navigationItem.leftBarButtonItem!.action = #selector(invokeCallbackCancel)
         }
 
         self.navigationController!.navigationBar.shadowImage = nil
@@ -189,9 +195,9 @@ open class PaymentVaultViewController: MercadoPagoUIScrollViewController, UIColl
 
     fileprivate func hideNavBarCallbackDisplayTitle() -> (() -> Void) {
         return { () -> Void in
-            if self.titleSectionReference != nil {
-                self.titleSectionReference.fillCell()
-            }
+//            if self.titleSectionReference != nil {
+//                self.titleSectionReference.fillCell()
+//            }
         }
     }
 
@@ -220,9 +226,9 @@ open class PaymentVaultViewController: MercadoPagoUIScrollViewController, UIColl
     }
 
     override func getNavigationBarTitle() -> String {
-        if self.titleSectionReference != nil {
-            self.titleSectionReference.title.text = ""
-        }
+//        if self.titleSectionReference != nil {
+//            self.titleSectionReference.title.text = ""
+//        }
         return "¿Cómo quieres pagar?".localized
     }
 
@@ -312,7 +318,7 @@ open class PaymentVaultViewController: MercadoPagoUIScrollViewController, UIColl
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "paymentVaultTitleCollectionViewCell",
 
                                                           for: indexPath) as! PaymentVaultTitleCollectionViewCell
-            self.titleSectionReference = cell
+            //self.titleSectionReference = cell
             titleCell = cell
             return cell
         } else if isGroupSection(section: indexPath.section) {
