@@ -16,7 +16,7 @@ open class PXHeaderComponent: PXComponentizable {
 
     var props: PXHeaderProps
 
-    init(props: PXHeaderProps) {
+    public init(props: PXHeaderProps) {
         self.props = props
     }
 }

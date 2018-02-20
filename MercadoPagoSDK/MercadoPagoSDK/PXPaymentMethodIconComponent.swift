@@ -8,10 +8,10 @@
 
 import UIKit
 
-public class PXPaymentMethodIconComponent: NSObject, PXComponentizable {
+open class PXPaymentMethodIconComponent: NSObject, PXComponentizable {
     var props: PXPaymentMethodIconProps
 
-    init(props: PXPaymentMethodIconProps) {
+    public init(props: PXPaymentMethodIconProps) {
         self.props = props
     }
     public func render() -> UIView {
@@ -19,10 +19,10 @@ public class PXPaymentMethodIconComponent: NSObject, PXComponentizable {
     }
 }
 
-class PXPaymentMethodIconProps: NSObject {
+open class PXPaymentMethodIconProps: NSObject {
     var paymentMethodIcon: UIImage?
 
-    init(paymentMethodIcon: UIImage?) {
+    public init(paymentMethodIcon: UIImage?) {
         self.paymentMethodIcon = paymentMethodIcon
     }
 }

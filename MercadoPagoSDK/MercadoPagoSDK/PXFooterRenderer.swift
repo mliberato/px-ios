@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PXFooterRenderer: NSObject {
+open class PXFooterRenderer: NSObject {
 
     let BUTTON_HEIGHT: CGFloat = 50.0
 
@@ -66,7 +66,7 @@ class PXFooterRenderer: NSObject {
     }
 }
 
-class PXFooterView: UIView {
+open class PXFooterView: UIView {
     public var principalButton: UIButton?
     public var linkButton: UIButton?
 }

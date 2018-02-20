@@ -8,10 +8,10 @@
 
 import UIKit
 
-public class PXPaymentMethodComponent: NSObject, PXComponentizable {
+open class PXPaymentMethodComponent: NSObject, PXComponentizable {
     var props: PXPaymentMethodProps
 
-    init(props: PXPaymentMethodProps) {
+    public init(props: PXPaymentMethodProps) {
        self.props = props
     }
 
@@ -26,7 +26,7 @@ public class PXPaymentMethodComponent: NSObject, PXComponentizable {
     }
 }
 
-class PXPaymentMethodProps: NSObject {
+open class PXPaymentMethodProps: NSObject {
     var paymentMethodIcon: UIImage?
     var amountTitle: String
     var amountDetail: String?
@@ -34,7 +34,7 @@ class PXPaymentMethodProps: NSObject {
     var paymentMethodDetail: String?
     var disclaimer: String?
 
-    init(paymentMethodIcon: UIImage?, amountTitle: String, amountDetail: String?, paymentMethodDescription: String?, paymentMethodDetail: String?, disclaimer: String?) {
+    public init(paymentMethodIcon: UIImage?, amountTitle: String, amountDetail: String?, paymentMethodDescription: String?, paymentMethodDetail: String?, disclaimer: String?) {
         self.paymentMethodIcon = paymentMethodIcon
         self.amountTitle = amountTitle
         self.amountDetail = amountDetail

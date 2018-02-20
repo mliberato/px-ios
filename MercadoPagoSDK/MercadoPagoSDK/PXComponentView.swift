@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class PXComponentView: UIView {
+open class PXComponentView: UIView {
     private var topGuideView = UIView()
     private var bottomGuideView = UIView()
     private var contentView = UIView()
@@ -39,7 +39,7 @@ public class PXComponentView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override public func addSubview(_ view: UIView) {
+    override open func addSubview(_ view: UIView) {
         self.contentView.addSubview(view)
     }
 

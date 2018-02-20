@@ -8,32 +8,32 @@
 
 import UIKit
 
-class PXFooterComponent: NSObject, PXComponentizable {
+open class PXFooterComponent: NSObject, PXComponentizable {
   var props: PXFooterProps
 
-    init(props: PXFooterProps) {
+    public init(props: PXFooterProps) {
         self.props = props
     }
 
-    func render() -> UIView {
+    public func render() -> UIView {
         return PXFooterRenderer().render(self)
     }
 }
-class PXFooterProps: NSObject {
+open class PXFooterProps: NSObject {
     var buttonAction: PXFooterAction?
     var linkAction: PXFooterAction?
     var primaryColor: UIColor?
-    init(buttonAction: PXFooterAction? = nil, linkAction: PXFooterAction? = nil, primaryColor: UIColor? = .pxBlueMp) {
+    public init(buttonAction: PXFooterAction? = nil, linkAction: PXFooterAction? = nil, primaryColor: UIColor? = .pxBlueMp) {
         self.buttonAction = buttonAction
         self.linkAction = linkAction
         self.primaryColor = primaryColor
     }
 }
 
-class PXFooterAction: NSObject {
+open class PXFooterAction: NSObject {
     var label: String
     var action : (() -> Void)
-    init(label: String, action:  @escaping (() -> Void)) {
+    public init(label: String, action:  @escaping (() -> Void)) {
         self.label = label
         self.action = action
     }

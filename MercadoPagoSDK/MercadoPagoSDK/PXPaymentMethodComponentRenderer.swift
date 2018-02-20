@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PXPaymentMethodComponentRenderer: NSObject {
+open class PXPaymentMethodComponentRenderer: NSObject {
     //Image
     let IMAGE_WIDTH: CGFloat = 48.0
     let IMAGE_HEIGHT: CGFloat = 48.0
@@ -18,13 +18,14 @@ class PXPaymentMethodComponentRenderer: NSObject {
     let PM_DETAIL_FONT_SIZE: CGFloat = PXLayout.XXS_FONT
     let DISCLAIMER_FONT_SIZE: CGFloat = PXLayout.XXXS_FONT
 
-    func render(component: PXPaymentMethodComponent) -> PXPaymentMethodView {
+    public func render(component: PXPaymentMethodComponent) -> PXPaymentMethodView {
         let pmBodyView = PXPaymentMethodView()
         pmBodyView.translatesAutoresizingMaskIntoConstraints = false
         let paymentMethodIcon = component.getPaymentMethodIconComponent()
         pmBodyView.paymentMethodIcon = paymentMethodIcon.render()
         pmBodyView.paymentMethodIcon!.layer.cornerRadius = IMAGE_WIDTH/2
         pmBodyView.addSubview(pmBodyView.paymentMethodIcon!)
+        pmBodyView.backgroundColor = .pxWhite
         PXLayout.centerHorizontally(view: pmBodyView.paymentMethodIcon!).isActive = true
         PXLayout.setHeight(owner: pmBodyView.paymentMethodIcon!, height: IMAGE_HEIGHT).isActive = true
         PXLayout.setWidth(owner: pmBodyView.paymentMethodIcon!, width: IMAGE_WIDTH).isActive = true
@@ -106,7 +107,7 @@ class PXPaymentMethodComponentRenderer: NSObject {
     }
 }
 
-class PXPaymentMethodView: PXBodyView {
+open class PXPaymentMethodView: PXBodyView {
     var paymentMethodIcon: UIView?
     var amountTitle: UILabel?
     var amountDetail: UILabel?

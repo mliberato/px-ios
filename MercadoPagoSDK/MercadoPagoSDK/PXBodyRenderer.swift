@@ -24,5 +24,5 @@ class PXBodyRenderer: NSObject {
     }
 }
 
-class PXBodyView: PXComponentView {
+open class PXBodyView: PXComponentView {
 }
