@@ -28,7 +28,7 @@ open class CardFormViewController: MercadoPagoUIViewController, UITextFieldDeleg
     @IBOutlet weak var keyboardHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var cardBackground: UIView!
     var cardView: UIView!
-    @IBOutlet weak var textBox: HoshiTextField!
+    @IBOutlet weak var textBox: UITextField!
 
     var cardViewBack: UIView?
     var cardFront: CardFrontView?
@@ -198,8 +198,8 @@ open class CardFormViewController: MercadoPagoUIViewController, UITextFieldDeleg
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
         self.getPromos()
-        textBox.borderInactiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
-        textBox.borderActiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
+//        textBox.borderInactiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
+//        textBox.borderActiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
         textBox.autocorrectionType = UITextAutocorrectionType.no
         textBox.keyboardType = UIKeyboardType.numberPad
         textBox.addTarget(self, action: #selector(CardFormViewController.editingChanged(_:)), for: UIControlEvents.editingChanged)
@@ -563,8 +563,8 @@ open class CardFormViewController: MercadoPagoUIViewController, UITextFieldDeleg
 
     func setTextBox(isError: Bool, inputAccessoryView: UIView) {
         if isError {
-            textBox.borderInactiveColor = ThemeManager.shared.getTheme().rejectedColor()
-            textBox.borderActiveColor = ThemeManager.shared.getTheme().rejectedColor()
+//            textBox.borderInactiveColor = ThemeManager.shared.getTheme().rejectedColor()
+//            textBox.borderActiveColor = ThemeManager.shared.getTheme().rejectedColor()
         }
         textBox.inputAccessoryView = inputAccessoryView
         textBox.setNeedsDisplay()
@@ -583,8 +583,8 @@ open class CardFormViewController: MercadoPagoUIViewController, UITextFieldDeleg
     }
 
     func hideMessage() {
-        self.textBox.borderInactiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
-        self.textBox.borderActiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
+//        self.textBox.borderInactiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
+//        self.textBox.borderActiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
         setupToolbarButtons()
         self.textBox.setNeedsDisplay()
         self.textBox.resignFirstResponder()

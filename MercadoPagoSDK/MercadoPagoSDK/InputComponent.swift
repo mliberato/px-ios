@@ -20,7 +20,7 @@ class SimpleInputComponent: UIView, PXComponent {
     var placeholder: String?
     var numeric: Bool = false
     weak var textFieldDelegate: UITextFieldDelegate!
-    var inputTextField: HoshiTextField!
+    var inputTextField: UITextField!
     weak var delegate: InputComponentListener?
     init(frame: CGRect, numeric: Bool = false, placeholder: String? = nil, textFieldDelegate: UITextFieldDelegate) {
         super.init(frame: frame)
@@ -40,13 +40,13 @@ class SimpleInputComponent: UIView, PXComponent {
         return self.frame.size.width
     }
     func setupView() {
-        inputTextField = HoshiTextField(frame: CGRect(x: getInputX(), y: getInputY(), width: getInputWidth(), height: INPUT_HEIGHT))
+        inputTextField = UITextField(frame: CGRect(x: getInputX(), y: getInputY(), width: getInputWidth(), height: INPUT_HEIGHT))
         if let placeholder = placeholder {
             inputTextField.placeholder = placeholder
         }
         inputTextField.font = Utils.getFont(size: 20.0)
-        inputTextField.borderInactiveColor = INACTIVE_BORDER_COLOR
-        inputTextField.borderActiveColor = ACTIVE_BORDER_COLOR
+//        inputTextField.borderInactiveColor = INACTIVE_BORDER_COLOR
+//        inputTextField.borderActiveColor = ACTIVE_BORDER_COLOR
         inputTextField.autocorrectionType = .no
         inputTextField.addTarget(self, action: #selector(SimpleInputComponent.editingChanged(textField:)), for: UIControlEvents.editingChanged)
         self.addSubview(inputTextField)
@@ -95,7 +95,7 @@ class CompositeInputComponent: SimpleInputComponent, UIPickerViewDataSource, UIP
     var dropDownSelectedOptionText: String!
     var dropDownOptions: [String]!
     var dropDownPlaceholder: String?
-    var dropDownTextField: HoshiTextField!
+    var dropDownTextField: UITextField!
     var optionSelected: Int!
     init(frame: CGRect, numeric: Bool = true, placeholder: String? = nil, dropDownPlaceholder: String? = nil, dropDownOptions: [String], textFieldDelegate: UITextFieldDelegate) {
         self.dropDownSelectedOptionText = dropDownOptions[0]
@@ -108,7 +108,7 @@ class CompositeInputComponent: SimpleInputComponent, UIPickerViewDataSource, UIP
         fatalError("init(coder:) has not been implemented")
     }
     override func setupView() {
-        dropDownTextField = HoshiTextField(frame: CGRect(x: HORIZONTAL_MARGIN, y: getInputY(), width: COMBO_WEIGHT, height: INPUT_HEIGHT))
+        dropDownTextField = UITextField(frame: CGRect(x: HORIZONTAL_MARGIN, y: getInputY(), width: COMBO_WEIGHT, height: INPUT_HEIGHT))
         if let dropDownPlaceholder = dropDownPlaceholder {
             dropDownTextField.placeholder = dropDownPlaceholder
         }
@@ -118,13 +118,13 @@ class CompositeInputComponent: SimpleInputComponent, UIPickerViewDataSource, UIP
             dropDownTextField.isEnabled = false
         }
         dropDownTextField.text = dropDownOptions[0]
-        dropDownTextField.borderInactiveColor = INACTIVE_BORDER_COLOR
-        dropDownTextField.borderActiveColor = ACTIVE_BORDER_COLOR
+//        dropDownTextField.borderInactiveColor = INACTIVE_BORDER_COLOR
+//        dropDownTextField.borderActiveColor = ACTIVE_BORDER_COLOR
         dropDownTextField.font = Utils.getFont(size: 20.0)
-        inputTextField = HoshiTextField(frame: CGRect(x: getInputX(), y: getInputY(), width: getInputWidth(), height: INPUT_HEIGHT))
+        inputTextField = UITextField(frame: CGRect(x: getInputX(), y: getInputY(), width: getInputWidth(), height: INPUT_HEIGHT))
         inputTextField.addTarget(self, action: #selector(SimpleInputComponent.editingChanged(textField:)), for: UIControlEvents.editingChanged)
-        inputTextField.borderInactiveColor = INACTIVE_BORDER_COLOR
-        inputTextField.borderActiveColor = ACTIVE_BORDER_COLOR
+//        inputTextField.borderInactiveColor = INACTIVE_BORDER_COLOR
+//        inputTextField.borderActiveColor = ACTIVE_BORDER_COLOR
         inputTextField.autocorrectionType = .no
         inputTextField.font = Utils.getFont(size: 20.0)
         inputTextField.text = ""

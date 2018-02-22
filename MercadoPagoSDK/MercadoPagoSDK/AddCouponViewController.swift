@@ -11,7 +11,7 @@ import UIKit
 open class AddCouponViewController: MercadoPagoUIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var textBox: HoshiTextField!
+    @IBOutlet weak var textBox: UITextField!
 
     override open var screenName: String { get { return "DISCOUNT_INPUT_CODE" } }
     var toolbar: PXToolbar?
@@ -133,8 +133,8 @@ open class AddCouponViewController: MercadoPagoUIViewController, UITextFieldDele
         self.errorLabel!.text = errorMessage
         self.errorLabel!.textAlignment = .center
         self.errorLabel!.font = self.errorLabel!.font.withSize(12)
-        textBox.borderInactiveColor = ThemeManager.shared.getTheme().rejectedColor()
-        textBox.borderActiveColor = ThemeManager.shared.getTheme().rejectedColor()
+//        textBox.borderInactiveColor = ThemeManager.shared.getTheme().rejectedColor()
+//        textBox.borderActiveColor = ThemeManager.shared.getTheme().rejectedColor()
         textBox.inputAccessoryView = errorLabel
         textBox.setNeedsDisplay()
         textBox.resignFirstResponder()
@@ -152,8 +152,8 @@ open class AddCouponViewController: MercadoPagoUIViewController, UITextFieldDele
     }
 
     func hideErrorMessage() {
-        self.textBox.borderInactiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
-        self.textBox.borderActiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
+//        self.textBox.borderInactiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
+//        self.textBox.borderActiveColor = ThemeManager.shared.getTheme().secondaryButton().tintColor
         self.textBox.inputAccessoryView = self.toolbar
         self.textBox.setNeedsDisplay()
         self.textBox.resignFirstResponder()

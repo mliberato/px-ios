@@ -11,7 +11,7 @@ import UIKit
 @objc
 public protocol MPTrackListener {
     func trackScreen(screenName: String)
-    func trackEvent(screenName: String?, action: String!, result: String?, extraParams: [String:String]?)
+    func trackEvent(screenName: String?, action: String!, result: String?, extraParams: [String: Any]?)
 }
 
 public class MPXTracker: NSObject {

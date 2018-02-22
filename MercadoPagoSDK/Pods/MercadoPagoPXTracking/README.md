@@ -7,5 +7,5 @@ Simply add the following line to your Podfile:
 ```ruby
 use_frameworks!
 platform :ios, '8.0'
-pod 'MercadoPagoPXTracking', '2.0.1'
+pod 'MercadoPagoPXTracking', '2.0.2'
 ```
