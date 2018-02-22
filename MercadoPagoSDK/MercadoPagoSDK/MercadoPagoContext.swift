@@ -141,7 +141,7 @@ open class MercadoPagoContext: NSObject {
         }
     }
     
-    open static func getParentLanguageID() -> String {
+    open static func getParentLanguage() -> String {
         return MercadoPagoContext.getLanguage().components(separatedBy: "-")[0]
     }
     
@@ -153,7 +153,7 @@ open class MercadoPagoContext: NSObject {
     
     open static func getParentLocalizedPath() -> String {
         let bundle = MercadoPago.getBundle() ?? Bundle.main
-        let pathID = getParentLanguageID()
+        let pathID = getParentLanguage()
         return bundle.path(forResource: pathID, ofType : "lproj")!
     }
 
