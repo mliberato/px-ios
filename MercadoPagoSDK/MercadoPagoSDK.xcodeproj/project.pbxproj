@@ -689,8 +689,8 @@
 		FC73AB47202B87AD00537C9F /* Localizable_pt.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC73AB49202B87AD00537C9F /* Localizable_pt.plist */; };
 		FC73AB4D202C957F00537C9F /* Localizable_es.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC73AB50202C957F00537C9F /* Localizable_es.plist */; };
 		FC73AB4E202C957F00537C9F /* Localizable_es.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC73AB50202C957F00537C9F /* Localizable_es.plist */; };
-		FC756B1B203F2C06009F436D /* poc_translations.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC756B1A203F2C06009F436D /* poc_translations.plist */; };
 		FC756B1D203F2C17009F436D /* poc_Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC756B1C203F2C17009F436D /* poc_Localizator.swift */; };
+		FC756B1F203F39BA009F436D /* poc_translations.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC756B1E203F39BA009F436D /* poc_translations.plist */; };
 		FC7BD8AA1FD5898700D5B2C7 /* PXErrorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7BD8A91FD5898700D5B2C7 /* PXErrorComponent.swift */; };
 		FC7BD8AB1FD5898700D5B2C7 /* PXErrorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7BD8A91FD5898700D5B2C7 /* PXErrorComponent.swift */; };
 		FC7BD8AD1FD5899000D5B2C7 /* PXErrorRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7BD8AC1FD5899000D5B2C7 /* PXErrorRenderer.swift */; };
@@ -1185,8 +1185,8 @@
 		FC7202DA1EA4FF6000A923A6 /* DiscountCouponTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountCouponTest.swift; sourceTree = "<group>"; };
 		FC73AB48202B87AD00537C9F /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pt; path = pt.lproj/Localizable_pt.plist; sourceTree = "<group>"; };
 		FC73AB4F202C957F00537C9F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = es; path = es.lproj/Localizable_es.plist; sourceTree = "<group>"; };
-		FC756B1A203F2C06009F436D /* poc_translations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = poc_translations.plist; sourceTree = "<group>"; };
 		FC756B1C203F2C17009F436D /* poc_Localizator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_Localizator.swift; sourceTree = "<group>"; };
+		FC756B1E203F39BA009F436D /* poc_translations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = poc_translations.plist; sourceTree = "<group>"; };
 		FC7BD8A91FD5898700D5B2C7 /* PXErrorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXErrorComponent.swift; sourceTree = "<group>"; };
 		FC7BD8AC1FD5899000D5B2C7 /* PXErrorRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXErrorRenderer.swift; sourceTree = "<group>"; };
 		FC7BD8B21FD6B8AF00D5B2C7 /* PXResourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXResourceProvider.swift; sourceTree = "<group>"; };
@@ -2451,7 +2451,7 @@
 				FC73AB50202C957F00537C9F /* Localizable_es.plist */,
 				FC73AB49202B87AD00537C9F /* Localizable_pt.plist */,
 				FC8A9BF7202CA38700FD7D7C /* Localizable_en.plist */,
-				FC756B1A203F2C06009F436D /* poc_translations.plist */,
+				FC756B1E203F39BA009F436D /* poc_translations.plist */,
 				FC756B1C203F2C17009F436D /* poc_Localizator.swift */,
 			);
 			name = Translations;
@@ -2676,6 +2676,7 @@
 				0FC4FC231B0FAF0E00CF7148 /* PromoTableViewCell.xib in Resources */,
 				FCBF13541E720A6E0092B756 /* EntityTypeTableViewCell.xib in Resources */,
 				15DA7E601CD92C670068896E /* IdentificationViewController.xib in Resources */,
+				FC756B1F203F39BA009F436D /* poc_translations.plist in Resources */,
 				FC8A9BF4202CA38700FD7D7C /* Localizable_en.plist in Resources */,
 				534D84241F5480F800C2C6F9 /* AvailableCardsViewController.xib in Resources */,
 				76062BD91C4D20C30067A14B /* PaymentVaultViewController.xib in Resources */,
@@ -2690,7 +2691,6 @@
 				76FD247B1C5BFEA1008C5DC0 /* CardBackView.xib in Resources */,
 				FC73AB4D202C957F00537C9F /* Localizable_es.plist in Resources */,
 				FCEB90841EB8F3FA0096B1A2 /* PayerCostPreferences.plist in Resources */,
-				FC756B1B203F2C06009F436D /* poc_translations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
