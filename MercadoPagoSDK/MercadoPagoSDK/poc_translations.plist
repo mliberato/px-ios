@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>error_body_title_</key>
+	<dict>
+		<key>comment</key>
+		<string></string>
+		<key>en</key>
+		<string>What can I do?</string>
+		<key>es</key>
+		<string>¿Qué puedo hacer?</string>
+		<key>es-MX</key>
+		<string>¿Qué puedo hacer? en mexicano</string>
+		<key>pt</key>
+		<string>O que posso fazer?</string>
+	</dict>
+</dict>
+</plist>
