@@ -46,7 +46,7 @@ private class poc_Localizator {
 }
 
 extension String {
-    var localized_poc: String {
+    var localized_beta: String {
         return poc_Localizator.sharedInstance.localize(string: self)
     }
 }
