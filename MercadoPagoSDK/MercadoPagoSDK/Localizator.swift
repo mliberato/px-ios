@@ -15,7 +15,7 @@ private class Localizator {
     lazy var localizableDictionary: NSDictionary! = {
         let bundle = MercadoPago.getBundle()
         
-        if let path = bundle?.path(forResource: "poc_translations", ofType: "plist") {
+        if let path = bundle?.path(forResource: "translations", ofType: "plist") {
             return NSDictionary(contentsOfFile: path)
         }
         fatalError("Localizable file NOT found")
