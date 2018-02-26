@@ -718,6 +718,7 @@
 		FCBF13531E720A6E0092B756 /* EntityTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBF13501E720A6E0092B756 /* EntityTypeTableViewCell.swift */; };
 		FCBF13541E720A6E0092B756 /* EntityTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCBF13511E720A6E0092B756 /* EntityTypeTableViewCell.xib */; };
 		FCBF13551E720A6E0092B756 /* EntityTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCBF13511E720A6E0092B756 /* EntityTypeTableViewCell.xib */; };
+		FCCACD7B20448F4A0008CF32 /* All_translations.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCCACD7A20448F4A0008CF32 /* All_translations.plist */; };
 		FCCC11F71FCF2D5A0001A591 /* PXResultViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC11F61FCF2D590001A591 /* PXResultViewModelTest.swift */; };
 		FCD089081F7E8F45002F3F22 /* SecondaryInfoTableViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = FCD089061F7E8F44002F3F22 /* SecondaryInfoTableViewCell.xib */; };
 		FCD089091F7E8F45002F3F22 /* SecondaryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD089071F7E8F44002F3F22 /* SecondaryInfoTableViewCell.swift */; };
@@ -1191,6 +1192,7 @@
 		FCBF134D1E7208900092B756 /* EntityType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityType.swift; sourceTree = "<group>"; };
 		FCBF13501E720A6E0092B756 /* EntityTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityTypeTableViewCell.swift; sourceTree = "<group>"; };
 		FCBF13511E720A6E0092B756 /* EntityTypeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntityTypeTableViewCell.xib; sourceTree = "<group>"; };
+		FCCACD7A20448F4A0008CF32 /* All_translations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = All_translations.plist; sourceTree = "<group>"; };
 		FCCC11F61FCF2D590001A591 /* PXResultViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXResultViewModelTest.swift; sourceTree = "<group>"; };
 		FCD089061F7E8F44002F3F22 /* SecondaryInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SecondaryInfoTableViewCell.xib; path = MercadoPagoSDK/SecondaryInfoTableViewCell.xib; sourceTree = "<group>"; };
 		FCD089071F7E8F44002F3F22 /* SecondaryInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondaryInfoTableViewCell.swift; path = MercadoPagoSDK/SecondaryInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -2430,6 +2432,7 @@
 		FC73AB42202B877600537C9F /* Translations */ = {
 			isa = PBXGroup;
 			children = (
+				FCCACD7A20448F4A0008CF32 /* All_translations.plist */,
 				FC756B1E203F39BA009F436D /* translations.plist */,
 				FC756B1C203F2C17009F436D /* Localizator.swift */,
 			);
@@ -2638,6 +2641,7 @@
 				0F0749051AED5BAE003DD39D /* Localizable.strings in Resources */,
 				765F8E631DCA59C500943FAC /* PurchaseItemDetailTableViewCell.xib in Resources */,
 				FCBF134B1E7204C30092B756 /* FinancialInstitutionTableViewCell.xib in Resources */,
+				FCCACD7B20448F4A0008CF32 /* All_translations.plist in Resources */,
 				1563DCA91E9C11CB00A7E5C8 /* CardsAdminViewController.xib in Resources */,
 				FC190A381E53879F003ACBE0 /* IdentificationTypes.plist in Resources */,
 				4BAA56261DB6B58D00501061 /* CardTypeTableViewCell.xib in Resources */,
