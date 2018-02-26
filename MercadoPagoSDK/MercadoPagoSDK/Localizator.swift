@@ -25,10 +25,9 @@ private class Localizator {
         let languageID = MercadoPagoContext.getLanguage()
         let parentlanguageID = MercadoPagoContext.getParentLanguage()
         
-        guard let localizedStringDictionary = localizableDictionary.value(forKey: string) as? NSDictionary, let localizedString = localizedStringDictionary.value(forKey: languageID) as? String else {
-            
-            
-            let localizedStringDictionary = localizableDictionary.value(forKey: string) as? NSDictionary
+        let localizedStringDictionary = localizableDictionary.value(forKey: string) as? NSDictionary
+        
+        guard localizedStringDictionary != nil, let localizedString = localizedStringDictionary?.value(forKey: languageID) as? String else {
             
             if let parentLocalizedString = localizedStringDictionary?.value(forKey: parentlanguageID) as? String {
                 return parentLocalizedString
@@ -38,7 +37,7 @@ private class Localizator {
                 assertionFailure("Missing translation for: \(string)")
             #endif
             
-            return ""
+            return string
         }
         
         return localizedString
