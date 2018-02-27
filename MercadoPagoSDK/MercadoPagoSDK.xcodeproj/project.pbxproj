@@ -678,6 +678,7 @@
 		FC3FC8901FBE13E800CF29E1 /* PXInstructionsActionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3FC88F1FBE13E800CF29E1 /* PXInstructionsActionComponent.swift */; };
 		FC3FC8911FBE13E800CF29E1 /* PXInstructionsActionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3FC88F1FBE13E800CF29E1 /* PXInstructionsActionComponent.swift */; };
 		FC3FC8931FBE13F900CF29E1 /* PXInstructionsActionRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3FC8921FBE13F900CF29E1 /* PXInstructionsActionRenderer.swift */; };
+		FC40542D204596AB008D4973 /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC756B1C203F2C17009F436D /* Localizator.swift */; };
 		FC45F1231E8D50F2008D4831 /* UnlockCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45F1211E8D50F2008D4831 /* UnlockCardTableViewCell.swift */; };
 		FC45F1241E8D50F2008D4831 /* UnlockCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45F1211E8D50F2008D4831 /* UnlockCardTableViewCell.swift */; };
 		FC45F1251E8D50F2008D4831 /* UnlockCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC45F1221E8D50F2008D4831 /* UnlockCardTableViewCell.xib */; };
@@ -3384,6 +3385,7 @@
 				4B4E2321200040F6007E8FDD /* ResultMockComponentHelper.swift in Sources */,
 				812BA9BF1FC8B21F00FF32C2 /* PXPaymentMethodComponent.swift in Sources */,
 				0F98837A1AD2AB6000F750F0 /* Installment.swift in Sources */,
+				FC40542D204596AB008D4973 /* Localizator.swift in Sources */,
 				4BD1E8671FB38096002B3F75 /* PXSDKSettings.swift in Sources */,
 				4B08CD9B1F20E2B400FE800A /* ESCFlowsTests.swift in Sources */,
 				76EC47F01C8616230086FA53 /* PhoneTest.swift in Sources */,
